@@ -1,0 +1,106 @@
+body{
+  margin: 0;
+}
+
+.header{
+  background-color: thistle;
+  height: 45px;
+}
+
+.container{
+  display: flex;
+}
+
+.left{
+  background-color: yellow;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.contents{
+  background-color: yellowgreen;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  background-color: bisque;
+  width:100%;
+}
+.footer > ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width:575px) {
+  .left{
+    display: none;
+  }
+
+  .contents{
+    height: 100vh;
+  }
+}
+
+@media (min-width: 576px) {
+  .left{
+    width:200px
+  }
+
+  .footer{
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .left{
+    width: 250px;
+  }
+  .footer{
+    display: none;
+  }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  
+  .left{
+    width:300px
+  }
+  .footer{
+    display: none;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .left{
+    width: 350px;
+  }
+  .footer{
+    display: none;
+  }
+
+}
+
+/*
+ width:100vw height:100vh;について
+ この設定はページを右上の最大化でページを最大化してときのサイズ以下にするという設定。例えば縦にリストがページの幅を大きく超えるほどあるときは、コンテンツの領域を超えて、リストがはみ出る感じになる
+
+ width:100% height:100%;について
+コンテンツに合わせて拡大する
+
+ヘッダー、コンテンツ両方を固定しようとすると設定がかなり難しいのでどちらかだけにしておく
+
+
+ */
+
+
+
